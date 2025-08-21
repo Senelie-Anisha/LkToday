@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LKTodayFINAL">
         <activity
+            android:name=".getStarted"
+            android:exported="false" />
+        <activity
             android:name=".signupPage"
             android:exported="false" />
         <activity
