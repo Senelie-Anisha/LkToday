@@ -9,4 +9,6 @@
     <string name="signuppassword">Password</string>
     <string name="email">Email</string>
     <string name="full_name">Full Name</string>
+    <string name="welcome_to_myapp">Welcome to LkToday!</string>
+    <string name="get_started">Get Started!</string>
 </resources>
