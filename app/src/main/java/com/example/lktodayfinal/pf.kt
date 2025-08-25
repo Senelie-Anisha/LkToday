@@ -8,25 +8,23 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var profileIcon: ImageView
+class pf : AppCompatActivity() {
+
+    private lateinit var back: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-
-        // ✅ Correct root id
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.MainActivity)) { v, insets ->
+        setContentView(R.layout.activity_pf)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.pf)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // ✅ Profile icon click → ProfileActivity
-        profileIcon = findViewById(R.id.profileIcon)
-        profileIcon.setOnClickListener {
-            val intent = Intent(this,pf::class.java)
+        back = findViewById(R.id.back)
+        back.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }

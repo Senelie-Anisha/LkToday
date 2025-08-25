@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="12dp"
@@ -12,22 +13,37 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- App Title + Profile Icon -->
+        <!-- 🔹 App Title + Menu + Profile Icon -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#AF2929"
             android:padding="16dp">
 
+            <!-- Menu Icon -->
+            <ImageView
+                android:id="@+id/menuIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/menu"
+                android:contentDescription="Menu Icon" />
+
+            <!-- App Title -->
             <TextView
                 android:id="@+id/titleText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@id/menuIcon"
+                android:layout_toStartOf="@id/profileIcon"
+                android:gravity="center"
                 android:text="@string/lktoday"
                 android:textColor="#FFFCFC"
                 android:textSize="24sp"
                 android:textStyle="bold" />
+
 
             <ImageView
                 android:id="@+id/profileIcon"
@@ -40,14 +56,14 @@
 
         </RelativeLayout>
 
-        <!-- Search Bar -->
+        <!-- 🔹 Search Bar -->
         <SearchView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:queryHint="Search news..." />
 
-        <!-- News Card 1 -->
+        <!-- 🔹 News Card 1 -->
         <LinearLayout
             android:id="@+id/card2"
             android:layout_width="match_parent"
@@ -80,7 +96,7 @@
                 android:textSize="14sp" />
         </LinearLayout>
 
-        <!-- News Card 2 -->
+        <!-- 🔹 News Card 2 -->
         <LinearLayout
             android:id="@+id/card3"
             android:layout_width="match_parent"
@@ -112,8 +128,9 @@
                 android:textSize="14sp" />
         </LinearLayout>
 
-        <!-- News Card 3 -->
+        <!-- 🔹 News Card 3 -->
         <LinearLayout
+            android:id="@+id/card4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
