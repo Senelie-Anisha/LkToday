@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     private lateinit var profileIcon: ImageView
+    private lateinit var menuIcon: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +28,13 @@ class MainActivity : AppCompatActivity() {
         profileIcon = findViewById(R.id.profileIcon)
         profileIcon.setOnClickListener {
             val intent = Intent(this,pf::class.java)
+            startActivity(intent)
+        }
+
+        //menu icon click -> Menu
+        menuIcon = findViewById(R.id.menuIcon)
+        menuIcon.setOnClickListener{
+            val intent = Intent(this, menu::class.java)
             startActivity(intent)
         }
     }

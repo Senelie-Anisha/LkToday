@@ -132,6 +132,7 @@
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
+                        android:id="@+id/settings"
                         android:src="@drawable/settings"
                         app:tint="#D35757" />
 
@@ -140,6 +141,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:text="Settings"
+                        android:id="@+id/set_txt"
                         android:textColor="#212121"
                         android:textSize="16sp" />
                 </LinearLayout>
